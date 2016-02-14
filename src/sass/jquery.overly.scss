@@ -7,39 +7,32 @@
 /*////////////////////////////////////////
 	BASE SETTING
 ////////////////////////////////////////*/
-#overly_open {
-  display: none;
-  z-index: 999;
-}
-
-#overly_open.on {
-  display: block;
-  z-index: 999;
-}
-
+#overly_open,
 #overly_close {
   display: none;
-  z-index: 999;
+  &.on {
+    display: block;
+  }
 }
 
-#overly_close.on {
-  display: block;
+.overly_btn_block {
+  position: relative;
   z-index: 999;
 }
-
 #overly_menu {
   position: absolute;
   top: 0;
   width: 100%;
   display: block;
-  background: rgba(0,0,0,0.7);
-  p {
-    
+  .overly_sentence {
+    color: yellow;
+    font-size: 18px;
+    padding: 0 20px 10px;
   }
   ul {
     text-align: center;
     margin: 0 auto;
-    li a {
+    .overly_links {
       text-decoration: none;
       font-size: 24px;
       color: yellow;
