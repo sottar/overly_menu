@@ -66,20 +66,27 @@
     // convert from #xxxxxx to rgba()
     function toRGB(color16) {
       var tmpColor16 = color16.substr(1)
-      var a16 = new Array();
-      var a10 = new Array();
-      if(tmpColor16.length = 6) {
+      var array16 = new Array();
+      var array10 = new Array();
+      console.log(tmpColor16.length);
+      if(tmpColor16.length == 6) {
         for(var i=1; i<=3; i++) {
-          a16[i] = tmpColor16.substr(2 * i - 2, 2);
-          a10[i] = parseInt(a16[i], 16);
+          array16[i-1] = tmpColor16.substr(2 * i - 2, 2);
         }
+      } else if (tmpColor16.length == 3) {
+        array16 = tmpColor16.split("")
+        console.log(array16);
       }
+      for(var t=0; t<=2; t++) {
+        array10[t] = parseInt(array16[t], 16);
+      }
+      console.log(array10);
       if(options.opacity) {
         var a = options.opacity;
       } else {
         var a = 1;
       }
-      var color10 = 'rgba(' + a10[1] + ',' + a10[2] + ',' + a10[3] + ',' + a + ')';
+      var color10 = 'rgba(' + array10[0] + ',' + array10[1] + ',' + array10[2] + ',' + a + ')';
       settings.color = color10;
     }
 
