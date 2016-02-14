@@ -1,0 +1,44 @@
+/*////////////////////////////////////////
+	BASE SETTING
+////////////////////////////////////////*/
+#overly_open {
+  display: none;
+  z-index: 999;
+}
+
+#overly_open.on {
+  display: block;
+  z-index: 999;
+}
+
+#overly_close {
+  display: none;
+  z-index: 999;
+}
+
+#overly_close.on {
+  display: block;
+  z-index: 999;
+}
+
+#overly_menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: block;
+}
+#overly_menu ul {
+  text-align: center;
+  margin: 0 auto;
+}
+#overly_menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: yellow;
+  font-family: helvetica;
+  line-height: 1.5em;
+}
+
+.overly_btn_block {
+  position: relative;
+}
