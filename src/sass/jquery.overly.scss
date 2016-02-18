@@ -25,19 +25,37 @@
   width: 100%;
   display: block;
   .overly_sentence {
-    color: yellow;
-    font-size: 18px;
-    padding: 0 20px 10px;
+    p {
+      color: yellow;
+      font-size: 18px;
+      padding: 0 20px 10px;
+    }
   }
   ul {
     text-align: center;
     margin: 0 auto;
     .overly_links {
+      a {
       text-decoration: none;
       font-size: 24px;
       color: yellow;
       font-family: helvetica;
       line-height: 1.5em;
+      }
+    }
+    &.flex {
+      display: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .overly_sentence {
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      .overly_links {
+        padding: 0 20px;
+        display: inline-block;
+      }
     }
   }
 }

@@ -14,6 +14,7 @@
       'speed': 300,
       'color' : 'rgba(0, 0, 0, 0.8)',
       'opacity': '0.8',
+      'style': 'list'
     }, options);
 
     //init
@@ -24,8 +25,8 @@
       'display': 'none',
       'background-color': settings.color
     });
-    $(elements).find('p').addClass('overly_sentence');
-    $(elements).find('a').addClass('overly_links');
+    $(elements).find('p').parent('li').addClass('overly_sentence');
+    $(elements).find('a').parent('li').addClass('overly_links');
 
 
     // btn
@@ -47,7 +48,11 @@
     $('#overly_menu ul').css({
       'padding-top': menuMargin
     });
-    $('')
+
+    // style
+    if(options.style == 'flex') {
+      $(elements).children('ul').addClass('sidebyside');
+    }
 
     // slide
     $('#overly_open').on('click', function() {
