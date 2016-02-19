@@ -14,12 +14,13 @@
       'speed': 300,
       'color' : 'rgba(0, 0, 0, 0.8)',
       'opacity': '0.8',
-      'style': 'list'
+      'style': 'list',
+      'hover': 'font-size'
     }, options);
 
     //init
-    if(options.color && options.color.match(/#/)) {
-      toRGB(options.color);
+    if(settings.color && settings.color.match(/#/)) {
+      toRGB(settings.color);
     }
     $(elements).css({
       'display': 'none',
@@ -27,7 +28,32 @@
     });
     $(elements).find('p').parent('li').addClass('overly_sentence');
     $(elements).find('a').parent('li').addClass('overly_links');
-
+    $('.overly_links').find('a').hover(function() {
+      if(settings.hover === 'opacity') {
+        $(this).css({'opacity': 0.8})
+      } else if (settings.hover === 'underline') {
+        $(this).css({'text-decoration': 'underline'})
+      } else if (settings.hover === 'font-weight') {
+        $(this).css({'font-weight': 'normal'})
+      } else if (settings.hover === 'letter-spacing') {
+        $(this).css({'letter-spacing': '2px'})
+      } else {
+        $(this).css({'font-size': '30px'})
+      }
+    },
+    function() {
+      if(settings.hover === 'opacity') {
+        $(this).css({'opacity': 1})
+      } else if (settings.hover === 'underline') {
+        $(this).css({'text-decoration': 'none'})
+      } else if (settings.hover === 'font-weight') {
+        $(this).css({'font-weight': '200'})
+      } else if (settings.hover === 'letter-spacing') {
+        $(this).css({'letter-spacing': '0px'})
+      } else {
+        $(this).css({'font-size': '24px'})
+      }
+    });
 
     // btn
     var btn_block = $('#overly_open').parent();
@@ -50,8 +76,8 @@
     });
 
     // style
-    if(options.style == 'flex') {
-      $(elements).children('ul').addClass('sidebyside');
+    if(settings.style == 'flex') {
+      $(elements).children('ul').addClass('flex');
     }
 
     // slide
@@ -68,7 +94,7 @@
       }, settings.speed);
     });
 
-    // convert from #xxxxxx to rgba()
+    // convert from #xxx to rgba()
     function toRGB(color16) {
       var tmpColor16 = color16.substr(1)
       var array16 = new Array();
@@ -86,8 +112,8 @@
         array10[t] = parseInt(array16[t], 16);
       }
       console.log(array10);
-      if(options.opacity) {
-        var a = options.opacity;
+      if(settings.opacity) {
+        var a = settings.opacity;
       } else {
         var a = 1;
       }
