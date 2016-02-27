@@ -85,9 +85,7 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  .content {
-    padding: 20px 3%;
-  }
+  padding: 20px 5%;
 }
 
 .clearfix:after {

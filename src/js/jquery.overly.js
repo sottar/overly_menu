@@ -13,7 +13,7 @@
     var settings = $.extend({
       'speed': 300,
       'color' : 'rgba(0, 0, 0, 0.8)',
-      'opacity': '0.8',
+      'opacity': 0.8,
       'style': 'list',
       'hover': 'font-size'
     }, options);
@@ -28,6 +28,7 @@
     });
     $(elements).find('p').parent('li').addClass('overly_sentence');
     $(elements).find('a').parent('li').addClass('overly_links');
+
     $('.overly_links').find('a').hover(function() {
       if(settings.hover === 'opacity') {
         $(this).css({'opacity': 0.8})
@@ -94,24 +95,21 @@
       }, settings.speed);
     });
 
-    // convert from #xxx to rgba()
+    // convert from #xxxxxx to rgba()
     function toRGB(color16) {
       var tmpColor16 = color16.substr(1)
       var array16 = new Array();
       var array10 = new Array();
-      console.log(tmpColor16.length);
       if(tmpColor16.length == 6) {
         for(var i=1; i<=3; i++) {
           array16[i-1] = tmpColor16.substr(2 * i - 2, 2);
         }
       } else if (tmpColor16.length == 3) {
         array16 = tmpColor16.split("")
-        console.log(array16);
       }
       for(var t=0; t<=2; t++) {
         array10[t] = parseInt(array16[t], 16);
       }
-      console.log(array10);
       if(settings.opacity) {
         var a = settings.opacity;
       } else {

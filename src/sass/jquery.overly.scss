@@ -5,7 +5,7 @@
 
 
 /*////////////////////////////////////////
-	BASE SETTING
+BASE SETTING
 ////////////////////////////////////////*/
 #overly_open,
 #overly_close {
@@ -39,8 +39,8 @@
       text-decoration: none;
       font-size: 24px;
       color: yellow;
-      font-weight: 200;
       font-family: helvetica;
+      font-weight: 200;
       line-height: 38px;
       -webkit-transition: all 0.3s linear;
       -webkit-transform-origin: 50% 50%;
@@ -49,6 +49,7 @@
       }
     }
     &.flex {
+      display: hidden;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
