@@ -1,6 +1,9 @@
 # Overly_menu
 Overly_menu is a jQuery plugin for the easiest way for make smart creating global menus 
 
+[overly menuの使い方 (Qiita)](http://qiita.com/sottar/items/7377d50991521fdfd1f0)
+(Written in Japanese)
+
 ## Usage
 
 [.zip Download (Mac)](http://www.sottar.net/dist/overly_menu_master.zip)  
