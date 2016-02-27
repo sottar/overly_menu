@@ -34,15 +34,11 @@
   text-decoration: none;
   font-size: 24px;
   color: yellow;
-  font-weight: 200;
   font-family: helvetica;
-  line-height: 38px;
-  -webkit-transition: all 0.3s linear;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transition: all 0.3s linear;
-  -mox-transform-origin: 50% 50%;
+  line-height: 1.5em;
 }
 #overly_menu ul.flex {
+  display: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

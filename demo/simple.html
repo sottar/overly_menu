@@ -35,7 +35,11 @@
   <script src="../src/js/jquery.overly.js"></script>
   <script>
     $(function() {
-      $('#overly_menu').Overly_menu();
+      $('#overly_menu').Overly_menu({
+        'speed': 300,
+        'color': '#000',
+        'opacity': 0.8
+      });
     })
   </script>
 </body>
