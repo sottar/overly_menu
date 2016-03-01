@@ -30,4 +30,4 @@ Overly_menu is a jQuery plugin for the easiest way for make smart creating globa
 <img src="http://www.sottar.net/demo/overly_menu/demo_flex.gif" width="300">
 
 ## LISENCE
-Code copyright 2016 Sota Ohara. Code released under the MIT license.  
+Code copyright 2016 Sottar. Code released under the MIT license.  
